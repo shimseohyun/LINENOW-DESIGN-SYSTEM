@@ -11,11 +11,12 @@ export const IconLabelWrapper = styled.span<IconLabelWrapperProps>`
   display: flex;
   align-items: center;
 
-  ${({ $gap, $font }) => {
+  ${({ $gap, $font, $fontColor }) => {
     return css`
       gap: ${$gap};
 
       ${({ theme }) => theme.fonts[$font]}
+      color: ${({ theme }) => theme.colors.font[$fontColor]};
     `;
   }}
 `;
