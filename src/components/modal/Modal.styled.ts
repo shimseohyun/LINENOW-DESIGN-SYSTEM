@@ -23,13 +23,14 @@ export const ModalBackground = styled.div`
 export const ModalContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 
   .mobile & {
+    gap: 1.5rem;
     padding: 1.25rem;
     min-width: 21rem;
   }
   .tablet & {
+    gap: 2.25rem;
     padding: 2rem;
     min-width: 30rem;
   }

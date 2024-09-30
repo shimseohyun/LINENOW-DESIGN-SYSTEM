@@ -30,7 +30,10 @@ const Modal = () => {
         {/* 버튼 부분 */}
         <ButtonLayout $col={2}>
           <Button
-            onClick={closeModal}
+            onClick={() => {
+              closeModal;
+              modal.secondButton?.onClick;
+            }}
             size="large"
             scheme="grayLight"
             shape="outline"
@@ -40,7 +43,10 @@ const Modal = () => {
           </Button>
 
           <Button
-            onClick={closeModal}
+            onClick={() => {
+              closeModal;
+              modal.primaryButton?.onClick;
+            }}
             size="large"
             scheme="blue"
             shape="fill"
