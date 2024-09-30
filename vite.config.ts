@@ -28,7 +28,7 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["react", "styled-components"],
+      external: ["react", "styled-components", "jotai"],
       output: {
         globals: {
           react: "React",
