@@ -12,7 +12,9 @@ export const ModalBackground = styled.div`
   z-index: 30;
 
   width: 100%;
-  max-width: 540px;
+  .mobile & {
+    max-width: 540px;
+  }
   height: 100%;
 
   background-color: rgb(15 15 15 / 70%);
@@ -23,9 +25,15 @@ export const ModalContainer = styled.div`
   flex-direction: column;
   gap: 1.5rem;
 
-  min-width: 21rem;
+  .mobile & {
+    padding: 1.25rem;
+    min-width: 21rem;
+  }
+  .tablet & {
+    padding: 2rem;
+    min-width: 30rem;
+  }
 
-  padding: 1.25rem;
   border-radius: 0.75rem;
 
   background-color: ${({ theme }) => theme.colors.background.white};
@@ -34,9 +42,16 @@ export const ModalContainer = styled.div`
 export const ModalTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
 
-  padding: 0 0.25rem;
+  .mobile & {
+    gap: 0.75rem;
+    padding: 0 0.25rem;
+    align-items: start;
+  }
+  .tablet & {
+    gap: 1.25rem;
+    align-items: center;
+  }
 `;
 
 export const ModalTextTitle = styled.h1`
