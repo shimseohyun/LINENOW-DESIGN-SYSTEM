@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
 
-import { FontType } from "@linenow-types/style";
+import { FontColor, FontType } from "@linenow-types/style";
 
 interface IconLabelWrapperProps {
   $gap: string;
   $font: FontType;
+  $fontColor: FontColor;
 }
 export const IconLabelWrapper = styled.span<IconLabelWrapperProps>`
   display: flex;

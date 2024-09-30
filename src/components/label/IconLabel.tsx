@@ -4,27 +4,32 @@ import { ReactNode } from "react";
 import { IconLabelWrapper } from "./IconLabel.styled";
 
 // types
-import { FontType } from "@linenow-types/style";
+import { FontColor, FontType } from "@linenow-types/style";
 import Icon, { IconProps } from "@components/icon/Icon";
 
 export interface IconLabelProps {
   iconPosition?: "left" | "right";
-  font: FontType;
+
   gap: string;
   icon: IconProps;
 
   children: ReactNode;
+  font?: FontType;
+  fontColor?: FontColor;
 }
 
 const IconLabel = ({
   iconPosition = "left",
-  font,
+
   gap,
   icon,
+
   children,
+  font = "b3",
+  fontColor = "gray",
 }: IconLabelProps) => {
   return (
-    <IconLabelWrapper $gap={gap} $font={font}>
+    <IconLabelWrapper $gap={gap} $font={font} $fontColor={fontColor}>
       {iconPosition == "left" ? <Icon {...icon} /> : null}
 
       {children}

@@ -5,10 +5,7 @@ export interface IconProps {
 
 const Icon = ({ size, name }: IconProps) => {
   return (
-    <img
-      src={`/src/assets/icons/${name}.svg`}
-      style={{ width: size, height: size }}
-    />
+    <img src={`/icons/${name}.svg`} style={{ width: size, height: size }} />
   );
 };
 export default Icon;

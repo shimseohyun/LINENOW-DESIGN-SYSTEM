@@ -3,6 +3,7 @@ export { default as theme } from "./styles/theme";
 export { default as GlobalStyle } from "./styles/global";
 
 // hooks
+export { default as useCountdown } from "./hooks/useCountdown";
 export { default as useForm } from "./hooks/useForm";
 export { default as useModal } from "./hooks/useModal";
 
